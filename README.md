@@ -1,2 +1,2 @@
 # JAVA_Course
- The learning record of JAVA.
+ The learning record of JAVA course.
