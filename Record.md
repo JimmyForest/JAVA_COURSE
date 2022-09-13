@@ -147,4 +147,5 @@
     }
 &emsp;&emsp;实验中主要运用了方法arr.codePointAt()，该方法的作用是，定位对应字符串arr中某一下标的ASCALL码值。从而可以从输入的计算字符串中获取字符来判断四则运算的方式。
 &emsp;&emsp;以下为题目的实验结果：
-![](./Picture/ch2/p3.png)   
+![](./Picture/ch2/p3.png)  
+####（3） 
