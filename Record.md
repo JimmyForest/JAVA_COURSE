@@ -1,4 +1,4 @@
-# <center> 第一章
+# <center> 第2章 JAV语言基础
 ## 一、课后作业 
 ### 1、文件组织
 &emsp;&emsp;下图为MyEclipse的Package Explorer：
@@ -148,4 +148,140 @@
 &emsp;&emsp;实验中主要运用了方法arr.codePointAt()，该方法的作用是，定位对应字符串arr中某一下标的ASCALL码值。从而可以从输入的计算字符串中获取字符来判断四则运算的方式。
 &emsp;&emsp;以下为题目的实验结果：
 ![](./Picture/ch2/p3.png)  
-####（3） 
+####（3）输出两个整数，打印出他们的大小关系，是小于、大于还是等于。
+&emsp;&emsp;以下分别为功能代码和测试代码：  
+
+    /**
+     * 
+     */
+    package homework;
+    
+    /**
+     * @author forest
+     *
+     */
+    public class Compare 
+    {
+    	public static char compareNum(int a, int b) 
+    	{
+    		char operator = '#';
+    		
+    		if(a == b)
+    		{
+    			operator = '=';
+    		}
+    		else if (a > b) 
+    		{
+    			operator = '>';
+    		}		
+    		else if (a < b) 
+    		{
+    			operator = '<';
+    		}
+    		return operator;
+    	}
+    }
+    /**
+     * 
+     */
+    package homework;
+    
+    import java.io.IOException;
+    import java.util.Scanner;
+    
+    /**
+     * @author forest
+     *
+     */
+    public class Main 
+    {
+    	/**
+    	 * @param args
+    	 * @throws IOException 
+    	 */
+    	public static void main(String[] args) throws IOException 
+    	{
+    		// TODO Auto-generated method stub
+    		while (true) 
+    		{			
+    			int a = 0,b = 0;
+    			char operator = '#';
+     			System.out.println("请输入两个数字：");
+    			System.out.println("第一个数字：");
+    		@SuppressWarnings("resource")
+    			Scanner input = new Scanner(System.in);
+    		a = input.nextInt();
+    			System.out.println("第二个数字：");
+    		b = input.nextInt();
+    		System.out.println("它们的大小关系为：");
+    		operator = Compare.compareNum(a, b);
+    		System.out.println(operator);
+    		}
+    	}
+    }
+&emsp;&emsp;以下为题目的实验结果：
+![](./Picture/ch2/p4.png)  
+####（4）JAVA阶乘求和1！+2！+...+10！。
+&emsp;&emsp;以下分别为功能代码和测试代码：  
+
+    /**
+     * 
+     */
+    package homework;
+    
+    /**
+     * @author forest
+     *
+     */
+    public class Math 
+    {	
+    	public static int factorialCal(int num) 
+    	{
+    		int answer = 0;
+    		int sum = 1;
+    		for (int j = 1; j < num + 1; j ++) 
+    		{
+    			for(int i = j; i > 0; i --)
+    			{
+    				sum = sum * i;
+    			}
+    			answer = answer + sum;
+    			sum = 1;
+    		}
+    		return answer;
+    	}
+    }
+    /**
+     * 
+     */
+    package homework;
+    
+    import java.io.IOException;
+    import java.util.Scanner;
+    
+    /**
+     * @author forest
+     *
+     */
+    public class Main 
+    {
+    	/**
+    	 * @param args
+    	 * @throws IOException 
+    	 */
+    	public static void main(String[] args) throws IOException 
+    	{
+    		// TODO Auto-generated method stub
+    		while (true) 
+    		{			
+    			int answer = 0;
+    		System.out.println("阶乘之和为为：");
+    			answer = Math.factorialCal(10);
+    			System.out.println(answer);
+    		}
+    	}
+    }
+&emsp;&emsp;以下为题目的实验结果：
+![](./Picture/ch2/p5.png)  
+# <center> 第3章 类的封装、继承和多态
+##一.ch3$1
