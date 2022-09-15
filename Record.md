@@ -284,4 +284,35 @@
 &emsp;&emsp;以下为题目的实验结果：
 ![](./Picture/ch2/p5.png)  
 # <center> 第3章 类的封装、继承和多态
-##一.ch3$1
+##一.3.1
+###1.类
+- 成员方法重载：一个类中有同名的成员方法，参数列表不同。重载的多种方法为一种功能提供多种实现。重载方法之间必须以不同的参数列表（数据类型，参数个数，**参数次序**（相同的数据类型和参数个数次序不同也重载））来区别。
+如：   
+
+
+    void set(int y, int m, int d);
+    void set(int m, int d);
+    void set(int d);
+    void set(MyDate date);  
+   
+###2.对象   
+- 声明对象：不会声明对象空间，只会分配引用变量的空间。
+  实例化对象：分配了实例化对象的空间，new关键词的作用是调用相应类中的构造方法，构造方法即构造了一块实例化对象的空间。  
+  相关介绍文章链接：[https://blog.csdn.net/bestcxx/article/details/49635111](https://blog.csdn.net/bestcxx/article/details/49635111 "声明对象和实例化对象的区别")（有比喻介绍）。  
+- JAVA的引用类型：
+
+
+    package ch3$1;   
+
+    public class MyDate
+    {
+    	int year, month, day;
+    	void set(int y, int m, int d)
+    	{
+    		year = y;
+    		month = m;
+    		day = d;
+    	}
+    }
+    
+    MyDate d1;
